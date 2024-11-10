@@ -99,7 +99,7 @@ nav button a{
   /* Navigation menu (ul) for small screens */
   ul {
     position: fixed;
-    width: 100%;
+    width: 40%;
     height: 100vh;
     background: #2c3e50;
     top: 80px;
