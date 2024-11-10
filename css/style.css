@@ -50,6 +50,7 @@ nav ul li a {
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 a.active,
@@ -57,6 +58,7 @@ a:hover {
   background: #1b9bff;
   transition: .5s;
 }
+
 
 .checkbtn {
   font-size: 22px;
@@ -86,6 +88,8 @@ nav button a{
 #check {
   display: none;
 }
+
+
 
 
 
