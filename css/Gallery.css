@@ -303,13 +303,12 @@ p {
 }
 
 .room-image, .pool-image {
-  width: 100%;
+  width: 200px;
   height: 200px; /* Set a fixed height */
   object-fit: cover; /* Ensures the image covers the area without distortion */
   border-radius: 8px;
   margin: 20px 0;
 }
-
 
 /* Center the "Our Pools" heading */
 .pool-types {
