@@ -53,11 +53,21 @@ nav ul li a {
   text-decoration: none;
 }
 
+
 a.active,
 a:hover {
-  background: #1b9bff;
-  transition: .5s;
+  background: linear-gradient(45deg, cyan, #00bcd4, #1b9bff); /* Gradient Background */
+  color: white;  /* Text color turns white */
+  padding: 10px 20px;  /* Add more padding for a "pushed" effect */
+  border-radius: 8px;  /* Smooth rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transform: scale(1.05); /* Slight scaling effect */
+  transition: all 0.3s ease-in-out;  /* Smooth transition for all properties */
+  text-transform: uppercase;  /* Uppercase text */
+  letter-spacing: 1px;  /* Letter spacing for better readability */
+  
 }
+
 
 
 .checkbtn {
