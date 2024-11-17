@@ -46,22 +46,6 @@
     border-radius: 10px;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box; /* Prevents footer from breaking out of the container */
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
 
 /* Media Queries for Responsiveness */
 

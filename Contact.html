@@ -13,12 +13,34 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        body {
-            background-image: url('image/Hp.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
+       body {
+    background-image: url('image/Hp.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+.main-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: top center;
+    }
+
+
+    .main-content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
     </style>
 </head>
 
