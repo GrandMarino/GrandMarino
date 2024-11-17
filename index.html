@@ -53,7 +53,11 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo"><a href="index.html">GrandMarinoResort</a></label>
+        <label class="logo">
+            <div class="logo-link">
+                <img src="image/Logo.png" alt="Grand Marino Resort Logo">
+            </div>
+        </label>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="Gallery.html">Gallery</a></li>
@@ -83,7 +87,15 @@
     </footer>
     <!-- Footer End -->
 
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Change 'index.html' to any link you want to navigate to
+    document.querySelector('.logo-link').addEventListener('click', function() {
+        window.location.href = 'index.html'; // Change this to your desired page
+    });
+});
+
+    </script>
 
 </body>
 
