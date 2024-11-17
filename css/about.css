@@ -51,7 +51,7 @@
 /* For larger screens: Desktops and laptops (max-width: 1200px) */
 @media (max-width: 1200px) {
     .about-us-container {
-        padding: 30px; /* Reduced padding */
+        padding: 25px; /* Reduced padding */
     }
 
     .about-us-text {
@@ -67,12 +67,12 @@
     }
 
     .about-us-container {
-        padding-bottom: 30px; /* Ensure space between content and footer */
+        padding-bottom: 25px; /* Ensure space between content and footer */
     }
 }
 
-/* For medium-sized screens: Tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
+/* For medium-sized screens: Tablets (max-width: 1500px) */
+@media (max-width: 1500px) {
     .about-us-container {
         padding: 20px; /* Reduced padding for smaller devices */
     }
