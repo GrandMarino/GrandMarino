@@ -36,21 +36,16 @@ label.logo a {
   text-decoration: none;
 }
 
-/* Navigation List Styles */
+
 nav ul {
-  display: flex; /* Display list items in a row */
-  list-style: none; /* Remove bullet points */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  justify-content: flex-end; /* Align the entire ul to the right */
-  flex-grow: 1; /* Allow ul to take available space between logo and checkbtn */
+  float: right;
+  margin-right: 20px;
 }
 
 nav ul li {
-  margin: 0 15px; /* Add horizontal spacing between menu items */
-  display: flex; /* Make each menu item a flex container */
-  justify-content: center; /* Center text horizontally inside each li */
-  align-items: center; /* Align text vertically inside each li */
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
 }
 
 nav ul li a {
@@ -120,7 +115,7 @@ nav button a {
   /* Navigation menu (ul) for small screens */
   ul {
     position: fixed;
-    width: 60%;
+    width: 40%;
     height: 100vh;
     background: #2c3e50;
     top: 80px;
@@ -128,13 +123,12 @@ nav button a {
     text-align: center;
     transition: all .5s;
     z-index: 1000; /* Make sure the menu is above everything else */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Align items to the top */
   }
 
   nav ul li {
     display: block;
     margin: 50px 0;
+    line-height: 30px;
   }
 
   nav ul li a {
@@ -163,6 +157,8 @@ nav button a {
     z-index: 999; /* Just below the menu */
   }
 }
+
+
 
 /* For Devices Below 480px */
 @media (max-width: 480px) {
@@ -198,13 +194,15 @@ nav button a {
   }
 }
 
-/* Navbar End */
-
 
 /* For Small Screens (above 480px but below 890px) */
 @media (max-width: 890px) {
   .checkbtn {
-    display: block; /* Display the hamburger menu */
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001; /* Ensure it's above the menu */
   }
 
   label.logo {
@@ -217,34 +215,35 @@ nav button a {
     width: 60%;
     height: 100vh;
     background: #2c3e50;
-    top: 80px;
+    top: 0;
     left: -100%;
     text-align: center;
     transition: all .5s;
-    z-index: 1000; /* Make sure the menu is above everything else */
-    flex-direction: column; /* Stack items vertically */
+    z-index: 1000; /* Menu behind the hamburger button */
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 30px; /* Ensure top spacing from the top bar */
   }
 
   nav ul li {
     display: block;
-    margin: 50px 0;
+    margin: 10px 0; /* Reduced margin for closer items */
   }
 
   nav ul li a {
     font-size: 20px;
+    padding: 10px 20px; /* More padding to make links easier to tap */
   }
 
   /* When the checkbox is checked, slide the menu into view */
   #check:checked ~ ul {
-    left: 0;
+    left: 0; /* Slide the menu in from the left */
   }
 
-  /* Background overlay that appears when the menu is opened */
   #check:checked ~ .overlay {
     display: block;
   }
 
-  /* Content overlay that hides other page content */
   .overlay {
     display: none;
     position: fixed;
@@ -256,6 +255,41 @@ nav button a {
     z-index: 999; /* Just below the menu */
   }
 }
+
+/* For Devices Below 480px */
+@media (max-width: 480px) {
+  label.logo a {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .checkbtn {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+
+  nav ul {
+    width: 70%;
+    height: auto;
+    top: 0;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  nav ul li {
+    margin: 8px 0; /* Further reduce margin for closer items */
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .footerContainer {
+    padding: 50px 20px;
+  }
+}
+
 
 /* For Devices Below 480px */
 @media (max-width: 480px) {
@@ -290,10 +324,6 @@ nav button a {
     padding: 50px 20px;
   }
 }
-
-/* Navbar End */
-
-
 
 
 /*for Small Screens (above 480px but below 890px) */
