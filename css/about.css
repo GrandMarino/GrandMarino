@@ -8,7 +8,6 @@
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
     box-sizing: border-box; /* Prevents any padding from overflowing */
     overflow: hidden; /* Prevent content overflow */
-    min-height: 300px; /* Prevent collapsing container */
 }
 
 .about-us-text {
@@ -51,7 +50,7 @@
 /* For larger screens: Desktops and laptops (max-width: 1200px) */
 @media (max-width: 1200px) {
     .about-us-container {
-        padding: 25px; /* Reduced padding */
+        padding: 20px; /* Reduced padding */
     }
 
     .about-us-text {
@@ -59,7 +58,7 @@
     }
 
     .about-us-text h1 {
-        font-size: 32px;
+        font-size: 25px;
     }
 
     .about-us-text p {
@@ -67,12 +66,12 @@
     }
 
     .about-us-container {
-        padding-bottom: 25px; /* Ensure space between content and footer */
+        padding-bottom: 20px; /* Ensure space between content and footer */
     }
 }
 
-/* For medium-sized screens: Tablets (max-width: 1500px) */
-@media (max-width: 1500px) {
+/* For medium-sized screens: Tablets (max-width: 1100px) */
+@media (max-width: 1100px) {
     .about-us-container {
         padding: 20px; /* Reduced padding for smaller devices */
     }
@@ -119,8 +118,13 @@
         font-size: 16px; /* Adjust text size for readability */
     }
 
+    footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+
     .about-us-container {
-        padding-bottom: 30px; /* Ensure space at the bottom of the container */
+        padding-bottom: 10px; /* Ensure space at the bottom of the container */
     }
 }
 
@@ -135,7 +139,12 @@
         font-size: 14px;
     }
 
+    footer {
+        padding: 10px;
+        font-size: 10px;
+    }
+
     .about-us-container {
-        padding-bottom: 20px; /* Ensure space at the bottom of the container */
+        padding-bottom: 10px; /* Ensure space at the bottom of the container */
     }
 }
