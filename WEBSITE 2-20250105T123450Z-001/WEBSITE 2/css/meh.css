@@ -1,0 +1,400 @@
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+}
+
+/* Main Header */
+.main-header {
+  background-color: white;
+  padding: 20px 5%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo styling */
+.main-header .logo img {
+  height: 100px;
+  width: 100px;
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2c3e50;
+  position: absolute;
+  right: 5%; /* Aligns the icon to the right */
+}
+
+.main-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.main-header nav ul li a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.main-header nav ul li a:hover {
+  background-color: yellow;
+  color: white;
+}
+
+.main-header nav ul li a.active {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .menu-icon {
+      display: block; /* Show the menu icon on small screens */
+  }
+
+  .main-header nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      display: none;
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-header nav ul li {
+      width: 100%;
+      text-align: center;
+  }
+
+  /* Toggle Menu Display */
+  #menu-toggle:checked + .menu-icon + nav ul {
+      display: flex;
+  }
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 480px) {
+  .main-header .logo {
+      font-size: 1.2rem;
+  }
+
+  .main-header nav ul li a {
+      font-size: 0.9rem;
+  }
+}
+
+ /* Container for the gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 16px; /* Space between items */
+}
+
+/* Gallery items */
+.gallery img {
+  width: 100%; /* Fill the grid cell */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Ensure images are cropped to fill the container */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.gallery img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+      grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+.room-heading {
+  font-size: 2rem;
+  color: #333;
+  margin: 20px 0; 
+  text-align: center; 
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.gallery-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;          /* Ensures the image width is 100% of the container */
+  height: 550px;        /* Fixed height for all images */
+  object-fit: cover;    /* Ensures the image maintains aspect ratio while filling the space */
+  border-radius: 10px;
+  margin: 0 auto;       /* Centers the image within the container */
+}
+
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-container h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.text-container p {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.text-container .btn {
+  padding: 0.8rem 1.2rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.text-container .btn:hover {
+  background: #555;
+}
+
+.header h1 {
+  text-align: center;
+}
+.header p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+.text-container p{
+  text-align: justify;
+}
+
+.amenities-heading {
+  text-align: center; 
+  font-size: 2rem; 
+  margin-bottom: 20px; 
+  color: #333; 
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid white;
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+  background-color: rgb(0, 0, 0, 0.9);
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 1px 10px 5px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 5px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 1.5em;
+  color: rgb(48, 1, 255);
+  opacity: 0.9;
+}
+
+/* Hover effect on social media icon */
+.socialIcons a:hover {
+  background-color: rgb(48, 1, 255);
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footerNav {
+  margin: 10px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: rgb(255, 255, 255);
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1em;
+  opacity: 0.7;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/* Footer End */
+
+/* Responsive Grid and Flex for All Devices */
+@media (max-width: 1200px) {
+  .gallery-container2 {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  .gallery-item {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    text-align: center;
+  }
+
+  .gallery-item2 {
+    grid-template-columns: 1fr; /* Stack images for mobile */
+  }
+}
+
+/* Smaller Screens (Mobile First) */
+@media (max-width: 480px) {
+  .gallery-item {
+    padding: 0.5rem;
+  }
+
+  .gallery-item2 {
+    padding: 0.5rem;
+  }
+}
+footer .copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #777;
+}

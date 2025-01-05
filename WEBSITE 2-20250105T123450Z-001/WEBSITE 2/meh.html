@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <!-- Font Awesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Reservation.html" class="active">Reserve Now</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header">
+        <h1>EXPLORE THE BEAUTY OF GRAND MARINO FARM RESORT</h1>
+        <p>Step into our Gallery to immerse yourself to experience the beauty and serenity of Grand marino farm resort</p>
+    </div>
+
+    <div class="gallery">
+        <img src="images/gallery1.jpg" alt="Image 1">
+        <img src="images/gallery2.jpg" alt="Image 2">
+        <img src="images/gallery3.jpg" alt="Image 3">
+        <img src="images/gallery4.jpg" alt="Image 4">
+        <img src="images/gallery5.jpg" alt="Image 5">
+        <img src="images/gallery6.jpg" alt="Image 6">
+        <img src="images/gallery7.jpg" alt="Image 7">
+        <img src="images/gallery8.jpg" alt="Image 8">
+        <img src="images/gallery9.jpg" alt="Image 9">
+        <img src="images/gallery10.jpg" alt="Image 10">
+        <img src="images/gallery11.jpg" alt="Image 11">
+        <img src="images/gallery12.jpg" alt="Image 12">
+    </div>
+
+    <main class="gallery-container">
+      <h2 class="amenities-heading">Amenities</h2>
+        <h2 class="room-heading">Room</h2>
+        <section class="gallery-item">
+            <div class="image-container">
+                <img src="images/familyroom.jpg" alt="Image 1">
+            </div>
+            <div class="text-container">
+                <h2>Famility Room</h2>
+                <p>
+                    our spacious and cozy Family Room, designed with comfort and relaxation in mind. Perfect for
+                    families or small groups, this room features modern amenities, including plush bedding, a large
+                    flat-screen TV, and a comfortable sitting area for everyone to enjoy. With ample space to unwind
+                    after a day of adventure, it offers a warm, inviting atmosphere that makes you feel right at home.
+                    Whether you're looking to relax together or share memories, our Family Room is the ideal place for a
+                    restful and enjoyable stay.
+                </p>
+                <p>
+                    Rate: <br>PHP 3,500 <br> 4 Pax <br>Free entrance <br>Free swimming <br>Free breakfast
+                </p>
+            </div>
+        </section>
+
+        <section class="gallery-item">
+            <div class="image-container">
+                <img src="images/dorm.jpg" alt="Image 2">
+            </div>
+            <div class="text-container">
+                <h2>Dormitory Room</h2>
+                <p>
+                    Our Dormitory offers an affordable and social lodging option, ideal for groups, backpackers, or
+                    those seeking a more communal experience. Designed with comfort and convenience in mind,
+                    and ample shared space to relax and connect with fellowtravelers. Whether you're unwinding in the
+                    common area or planning your next adventure, you'll enjoy a vibrant, friendly atmosphere. With
+                    access to all resort amenities and breathtaking views, ourDormitory is the perfect base for those
+                    looking to explore and make lasting memories.
+                </p>
+                <p>
+                    Rate: <br>PHP 7,500 / PHP 10,000 <br>15 / 20 Pax <br>Free entrance <br>Free swimming
+                </p>
+            </div>
+
+        </section>
+
+        <section class="gallery-item">
+            <div class="image-container">
+                <img src="images/Cabinroom.jpg" alt="Image 3">
+            </div>
+            <div class="text-container">
+                <h2>Accomodation Room</h2>
+                <p>
+                    Escape to the charm and tranquility of our cozy Cabin, where rustic elegance meets modern comfort.
+                    Nestled amidst nature, this private retreat offers a peaceful sanctuary for those seeking a unique
+                    getaway. The cabin features a fully equipped kitchenette, a spacious living area , and comfortable
+                    bedroom designed for restful nights. With large windows showcasingstunning views of the surrounding
+                    landscape, it’s the perfect place to relax and reconnect withfamily or friends. Whether you’re
+                    enjoying the outdoors or curling up indoors, our cabin provides anunforgettable resort experience.
+                </p>
+                <p>
+                    Rate: <br>PHP 2,500 <br>2 Pax <br>Free entrance <br>Free swimming <br>Free breakfast for 2
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Modal -->
+    <div class="modal" id="image-modal">
+        <span class="close" id="close-modal">&times;</span>
+        <img id="modal-img" src="" alt="Full View">
+    </div>
+
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const closeModal = document.getElementById('close-modal');
+
+        // Add click event to all images
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = image.src;
+            });
+        });
+
+        // Close modal on clicking the close button
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal on clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target !== modalImg) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Get all gallery images
+        const images = document.querySelectorAll('.gallery-item');
+
+        // Add click event listener to each image
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // Toggle the 'zoomed' class on click to zoom or unzoom
+                image.classList.toggle('zoomed');
+            });
+        });
+    </script>
+
+    <!-- Footer Section  -->
+    <footer>
+        <div class="footer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/GrandMarinoFarmResort/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/grandmarino.farmresort/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="About.html">About us</a></li>
+                    <li><a href="Contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Copyright Section -->
+    <div class="copyright">
+      <p>&copy; 2025 Grand Marino Farm Resort. All rights reserved.</p>
+  </div>
+    </footer>
+</body>
+
+</html>
