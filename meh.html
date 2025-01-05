@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <link rel="stylesheet" href="css/meh.css">
+    <!-- Font Awesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+          <h2>Contact Us</h2>
+          <p>We’d love to hear from you. Please fill in the form below and we’ll get back to you shortly!</p>
+      
+          <form id="contact-form" action="#" method="POST">
+            <!-- Name Field -->
+            <div class="input-group">
+              <input type="text" id="name" name="name" required />
+              <label for="name">Your Name</label>
+              <div class="error-message" id="name-error">Please enter your name.</div>
+            </div>
+      
+            <!-- Email Field -->
+            <div class="input-group">
+              <input type="email" id="email" name="email" required />
+              <label for="email">Your Email</label>
+              <div class="error-message" id="email-error">Please enter a valid email address.</div>
+            </div>
+      
+            <!-- Message Field -->
+            <div class="input-group">
+              <textarea id="message" name="message" required></textarea>
+              <label for="message">Your Message</label>
+              <div class="error-message" id="message-error">Please enter your message.</div>
+            </div>
+      
+            <!-- Recaptcha -->
+            <div class="recaptcha">
+              <!-- Placeholder for Google reCAPTCHA -->
+            </div>
+      
+            <!-- Submit Button -->
+            <div class="submit-group">
+              <button type="submit" class="submit-btn">Send Message</button>
+              <div class="loading-spinner" id="loading-spinner">
+                <div class="spinner"></div>
+              </div>
+            </div>
+          </form>
+      
+          <!-- Contact Info Icons -->
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-phone-alt"></i>
+              <p>+1 (123) 456-7890</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>1234 Elm Street, Some City, Some Country</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            const submitButton = document.querySelector('.submit-btn');
+
+            form.addEventListener('input', function () {
+                // Check if the form is valid
+                const isFormValid = form.checkValidity();
+                submitButton.disabled = !isFormValid;
+            });
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent actual form submission for demo
+                alert('Form submitted successfully!');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
