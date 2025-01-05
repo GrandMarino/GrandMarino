@@ -23,10 +23,9 @@ html, body {
 
 /* Logo styling */
 .main-header .logo img {
-    height: 100px;
-    width: 100px;
+    height: 80px;  /* Adjust logo size */
+    width: auto;   /* Maintain aspect ratio */
 }
-
 
 #menu-toggle {
     display: none;
@@ -42,6 +41,7 @@ html, body {
     right: 5%; /* Aligns the icon to the right */
 }
 
+/* Navigation */
 .main-header nav ul {
     list-style: none;
     padding: 0;
@@ -76,6 +76,10 @@ html, body {
 @media (max-width: 768px) {
     .menu-icon {
         display: block; /* Show the menu icon on small screens */
+    }
+
+    .main-header .logo img {
+        height: 50px;  /* Smaller logo on mobile */
     }
 
     .main-header nav ul {
@@ -118,13 +122,25 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 900px; /* Increased max-width */
+    max-width: 900px; /* Set max width */
     margin: 20px auto; /* Center the box horizontally */
-    padding: 100px; /* Added more padding */
-    background-color: white; /* White background for the box */
-    border: 1px solid #ddd; /* Light border for the box */
-    border-radius: 10px; /* Slightly more rounded corners */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Increased shadow */
+    padding: 50px; /* Adjust padding */
+    background-color: white; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px;  /* Reduced padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;  /* Even less padding on smaller devices */
+    }
 }
 
 /* Form Header */
@@ -141,9 +157,9 @@ html, body {
 /* Form Row Inside the Box */
 .form-row {
     display: flex;
-    justify-content: space-between; /* Place sections side by side */
+    justify-content: space-between;
     align-items: flex-start;
-    width: 100%; /* Full width of the container */
+    width: 100%;
     gap: 50px; /* Increased gap between sections */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
@@ -152,11 +168,24 @@ html, body {
 .form-section {
     flex: 1 1 45%; /* Each section takes up 45% of the row */
     max-width: 45%; /* Prevent exceeding 45% */
-    padding: 50px; /* Increased padding for each section */
+    padding: 25px; /* Reduced padding for better responsiveness */
     box-sizing: border-box;
     background-color: #f9f9f9; /* Light background for sections */
     border: 1px solid #ccc; /* Border around sections */
     border-radius: 6px; /* Slightly rounded corners */
+}
+
+/* For Small Screens, Change Form to Column Layout */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* Stack form sections vertically */
+        gap: 30px; /* Reduced gap between sections */
+    }
+
+    .form-section {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 100%; /* No max width */
+    }
 }
 
 /* Form Styles */
@@ -176,10 +205,10 @@ html, body {
 
 .form-control {
     width: 100%; /* Full width for inputs */
-    padding: 15px; /* Larger padding for inputs */
-    font-size: 1.1rem; /* Slightly larger input font */
+    padding: 12px; /* Adjusted padding for usability */
+    font-size: 1.1rem; /* Increased font size for inputs */
     border: 1px solid #ccc;
-    border-radius: 10px; /* Slightly more rounded corners */
+    border-radius: 10px; /* Rounded corners */
     box-sizing: border-box;
     transition: border-color 0.3s;
     text-align: left; /* Align text inside input fields to the left */
@@ -192,30 +221,36 @@ html, body {
 
 /* Submit Button */
 .btn-submit {
-    display: inline-block; /* Change to inline-block to allow centering */
-    padding: 12px 24px; /* Larger padding for the button */
+    display: inline-block;
+    padding: 12px 24px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 6px; /* Slightly more rounded corners */
-    font-size: 1.1rem; /* Larger font size for button */
+    border-radius: 6px;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 25px auto; /* Increased margin for centering */
+    margin: 25px auto; /* Center button */
 }
 
 .btn-submit:hover {
     background-color: #0056b3;
 }
 
-/* Centering the Button */
 .submit-button-container {
     display: flex;
-    justify-content: center; /* Center the button horizontally */
-    margin-top: 25px; /* Added more space above the button */
+    justify-content: center;
+    margin-top: 25px;
 }
 
-/* Footer Start */
+@media (max-width: 480px) {
+    .btn-submit {
+        padding: 10px 20px;  /* Smaller padding */
+        font-size: 1rem;      /* Adjust font size */
+    }
+}
+
+/* Footer */
 footer {
     background-color: rgb(0, 0, 0, 0.9);
     width: 100%;
@@ -231,6 +266,7 @@ footer {
 .socialIcons {
     display: flex;
     justify-content: center;
+    gap: 15px;  /* Increased gap for better visibility */
 }
 
 .socialIcons a {
@@ -247,7 +283,6 @@ footer {
     opacity: 0.9;
 }
 
-/* Hover effect on social media icon */
 .socialIcons a:hover {
     background-color: rgb(48, 1, 255);
     transition: 0.5s;
@@ -266,21 +301,21 @@ footer {
     display: flex;
     justify-content: center;
     list-style-type: none;
+    gap: 10px;
 }
 
 .footerNav ul li a {
     color: rgb(255, 255, 255);
-    margin: 20px;
     text-decoration: none;
-    font-size: 1.1em; /* Slightly larger footer link font */
+    font-size: 1.1em;
     opacity: 0.7;
     transition: 0.5s;
-    font-size: 20px;
 }
 
 .footerNav ul li a:hover {
     opacity: 1;
 }
+
 
 .designer {
     opacity: 0.7;
@@ -289,9 +324,10 @@ footer {
     font-weight: 400;
     margin: 0px 5px;
 }
+
 footer .copyright {
     text-align: center;
     font-size: 14px;
     margin-top: 20px;
     color: #777;
-  }
+}

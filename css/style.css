@@ -1,156 +1,172 @@
-/* General Styles */
 html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
 }
 
 /* Main Header */
 .main-header {
-    background-color: white;
-    padding: 20px 5%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 10;
+  background-color: white;
+  padding: 20px 5%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 /* Logo styling */
 .main-header .logo img {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 
 
 #menu-toggle {
-    display: none;
+  display: none;
 }
 
 /* Hamburger Icon */
 .menu-icon {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #2c3e50;
-    position: absolute;
-    right: 5%; /* Aligns the icon to the right */
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2c3e50;
+  position: absolute;
+  right: 5%; /* Aligns the icon to the right */
 }
 
 .main-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .main-header nav ul li a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 .main-header nav ul li a:hover {
-    background-color: yellow;
-    color: white;
+  background-color: yellow;
+  color: white;
 }
 
 .main-header nav ul li a.active {
-    background-color: yellow;
-    color: black;
-    font-weight: bold;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
 }
 
 /* Responsive Navigation */
 @media (max-width: 768px) {
-    .menu-icon {
-        display: block; /* Show the menu icon on small screens */
-    }
+  .menu-icon {
+      display: block; /* Show the menu icon on small screens */
+  }
 
-    .main-header nav ul {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        display: none;
-        padding: 1rem 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+  .main-header nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      display: none;
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-    .main-header nav ul li {
-        width: 100%;
-        text-align: center;
-    }
+  .main-header nav ul li {
+      width: 100%;
+      text-align: center;
+  }
 
-    /* Toggle Menu Display */
-    #menu-toggle:checked + .menu-icon + nav ul {
-        display: flex;
-    }
+  /* Toggle Menu Display */
+  #menu-toggle:checked + .menu-icon + nav ul {
+      display: flex;
+  }
 }
 
 /* Small Screen Adjustments */
 @media (max-width: 480px) {
-    .main-header .logo {
-        font-size: 1.2rem;
-    }
+  .main-header .logo {
+      font-size: 1.2rem;
+  }
 
-    .main-header nav ul li a {
-        font-size: 0.9rem;
-    }
+  .main-header nav ul li a {
+      font-size: 0.9rem;
+  }
 }
-
 
 /* Full-Screen Slideshow */
 .slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  margin: 0; /* Remove any margin causing white space */
+  padding: 0; /* Ensure no padding around the container */
+  display: flex; /* Flexbox for centering and controlling image positioning */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
 }
 
 .slideshow-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images cover the entire slide */
-    display: block; /* Prevents extra space below images */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire slide */
+  display: block; /* Prevents extra space below images */
+  transition: transform 0.3s ease-in-out; /* Smooth transition on resize */
 }
+
+@media (max-width: 768px) {
+  .slideshow-container {
+      height: 100vh; /* Ensures the slideshow container height is always 100% of viewport height */
+  }
+
+  .slideshow-container img {
+      width: 100vw; /* Ensure image stretches across full width of viewport */
+      height: 100vh; /* Ensure image stretches across full height of viewport */
+  }
+}
+
 
 /* Dots/Indicators for Full-Screen Slideshow */
 .slideshow-dots {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .dot.active {
-    background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-
+/* Slogan Styling */
 .slogan {
   position: absolute;
   top: 20%; 
@@ -161,10 +177,43 @@ html, body {
   padding: 10px; 
   border-radius: 5px; 
   text-align: center;
+  z-index: 20; /* Make sure it's above the slideshow */
 }
-.slogan h1{
+
+.slogan h1 {
   font-size: 70px;
 }
+
+/* Responsive Slogan Styling */
+@media (max-width: 1024px) {
+  .slogan h1 {
+      font-size: 50px; /* Adjusting the font size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan h1 {
+      font-size: 40px; /* Adjusting the font size for small devices */
+  }
+
+  .slogan {
+      top: 30%; /* Position adjustment */
+      font-size: 18px; /* Adjusting the overall font size */
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan h1 {
+      font-size: 30px; /* Further adjustment for mobile devices */
+  }
+
+  .slogan {
+      top: 35%; /* Further positioning change */
+      padding: 5px;
+  }
+}
+
 
 
 /* Footer Start */
