@@ -6,6 +6,7 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #f7f7f7;
 }
 
 /* Main Header */
@@ -25,6 +26,7 @@ html, body {
     height: 100px;
     width: 100px;
 }
+
 
 #menu-toggle {
     display: none;
@@ -110,48 +112,77 @@ html, body {
     }
 }
 
+/* Form Container (Box) */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px; /* Increased max-width */
+    margin: 20px auto; /* Center the box horizontally */
+    padding: 100px; /* Added more padding */
+    background-color: white; /* White background for the box */
+    border: 1px solid #ddd; /* Light border for the box */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Increased shadow */
+}
+
 /* Form Header */
 .form-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Increased margin */
 }
 
 .form-header h2 {
-    color: #333;
+    color: #00bcd4;
+    font-size: 1.8rem; /* Larger header font size */
+}
+
+/* Form Row Inside the Box */
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Place sections side by side */
+    align-items: flex-start;
+    width: 100%; /* Full width of the container */
+    gap: 50px; /* Increased gap between sections */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Form Section Inside the Box */
+.form-section {
+    flex: 1 1 45%; /* Each section takes up 45% of the row */
+    max-width: 45%; /* Prevent exceeding 45% */
+    padding: 50px; /* Increased padding for each section */
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Light background for sections */
+    border: 1px solid #ccc; /* Border around sections */
+    border-radius: 6px; /* Slightly rounded corners */
 }
 
 /* Form Styles */
-.form-row {
-    display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    margin-bottom: 20px;
-}
-
-/* Column Styles */
-.col-md-6 {
-    flex: 1; /* Allow columns to grow equally */
-    padding: 10px;
-}
-
-/* Form Group Styles */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increased margin between fields */
+    width: 100%; /* Full width for inputs */
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+    display: block; /* Ensure labels are block elements */
+    margin-bottom: 10px; /* Increased margin for labels */
     font-weight: bold;
-    color: #555;
+    color: #00bcd4;
+    font-size: 1.1rem; /* Slightly larger label font */
+    text-align: left; /* Align labels to the left */
 }
 
 .form-control {
-    width: 100%;
-    padding: 10px;
+    width: 100%; /* Full width for inputs */
+    padding: 15px; /* Larger padding for inputs */
+    font-size: 1.1rem; /* Slightly larger input font */
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px; /* Slightly more rounded corners */
     box-sizing: border-box;
     transition: border-color 0.3s;
+    text-align: left; /* Align text inside input fields to the left */
 }
 
 .form-control:focus {
@@ -162,15 +193,15 @@ html, body {
 /* Submit Button */
 .btn-submit {
     display: inline-block; /* Change to inline-block to allow centering */
-    padding: 8px 16px; /* Adjust padding for a smaller button */
+    padding: 12px 24px; /* Larger padding for the button */
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 14px; /* Adjust font size for a smaller button */
+    border-radius: 6px; /* Slightly more rounded corners */
+    font-size: 1.1rem; /* Larger font size for button */
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 20px auto; /* Center the button with auto margins */
+    margin: 25px auto; /* Increased margin for centering */
 }
 
 .btn-submit:hover {
@@ -181,83 +212,80 @@ html, body {
 .submit-button-container {
     display: flex;
     justify-content: center; /* Center the button horizontally */
-    margin-top: 20px; /* Add some space above the button */
+    margin-top: 25px; /* Added more space above the button */
 }
 
 /* Footer Start */
 footer {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.9);
     width: 100%;
     padding: 10px 0;
     text-align: center;
-  }
-  
-  .footerContainer {
+}
+
+.footerContainer {
     width: 100%;
     padding: 1px 10px 5px;
-  }
-  
-  
-  
-  .socialIcons {
+}
+
+.socialIcons {
     display: flex;
     justify-content: center;
-  }
-  
-  .socialIcons a {
+}
+
+.socialIcons a {
     text-decoration: none;
     padding: 5px;
     background-color: white;
     margin: 10px;
     border-radius: 50%;
-  }
-  
-  .socialIcons a i {
+}
+
+.socialIcons a i {
     font-size: 1.5em;
     color: rgb(48, 1, 255);
     opacity: 0.9;
-  }
-  
-  /* Hover effect on social media icon */
-  .socialIcons a:hover {
-    background-color: #111111;
+}
+
+/* Hover effect on social media icon */
+.socialIcons a:hover {
+    background-color: rgb(48, 1, 255);
     transition: 0.5s;
-  }
-  
-  .socialIcons a:hover i {
+}
+
+.socialIcons a:hover i {
     color: white;
     transition: 0.5s;
-  }
-  
-  .footerNav {
+}
+
+.footerNav {
     margin: 10px 0;
-  }
-  
-  .footerNav ul {
+}
+
+.footerNav ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
-  }
-  
-  .footerNav ul li a {
+}
+
+.footerNav ul li a {
     color: rgb(255, 255, 255);
     margin: 20px;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.1em; /* Slightly larger footer link font */
     opacity: 0.7;
     transition: 0.5s;
     font-size: 20px;
-  }
-  
-  .footerNav ul li a:hover {
+}
+
+.footerNav ul li a:hover {
     opacity: 1;
-  }
-  
-  .designer {
+}
+
+.designer {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
-  }
-  /* Footer End */
+}

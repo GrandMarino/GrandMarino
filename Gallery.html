@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="css/Gallery.css">
+    <title>Gallery Page</title>
+    <link rel="stylesheet" href="css/gallery.css">
     <!-- Font Awesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -16,109 +16,144 @@
 
 <body>
 
-    <!-- Navbar Section Begin -->
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">
-            <div class="logo-link">
-                <img src="image/Logo.png" alt="Grand Marino Resort Logo">
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Reservation.html" class="active">Reserve Now</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header">
+        <h1>Gallery of Images</h1>
+    </div>
+
+    <div class="gallery">
+        <img src="images/gallery1.jpg" alt="Image 1">
+        <img src="images/gallery2.jpg" alt="Image 2">
+        <img src="images/gallery3.jpg" alt="Image 3">
+        <img src="images/gallery4.jpg" alt="Image 4">
+        <img src="images/gallery5.jpg" alt="Image 5">
+        <img src="images/gallery6.jpg" alt="Image 6">
+        <img src="images/gallery7.jpg" alt="Image 7">
+        <img src="images/gallery8.jpg" alt="Image 8">
+        <img src="images/gallery9.jpg" alt="Image 9">
+        <img src="images/gallery10.jpg" alt="Image 10">
+        <img src="images/gallery11.jpg" alt="Image 11">
+        <img src="images/gallery12.jpg" alt="Image 12">
+    </div>
+
+    <main class="gallery-container">
+        <h2 class="room-heading">Room</h2>
+        <section class="gallery-item">
+            <div class="image-container">
+                <img src="images/familyroom.jpg" alt="Image 1">
             </div>
-        </label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Gallery.html">Gallery</a></li>
-            <li><a href="About.html">About us</a></li>
-            <li><a href="Contact.html">Contact us</a></li>
-            <li><a href="booking.html" >Booking</a></li>
-        </ul>
-    </nav>
-    <!-- Navbar End -->
-     
-    <!-- Photo Begin -->
-<header>
-    <h1>Our Rooms</h1>
-</header>
+            <div class="text-container">
+                <h2>Famility Room</h2>
+                <p>
+                    our spacious and cozy Family Room, designed with comfort and relaxation in mind. Perfect for
+                    families or small groups, this room features modern amenities, including plush bedding, a large
+                    flat-screen TV, and a comfortable sitting area for everyone to enjoy. With ample space to unwind
+                    after a day of adventure, it offers a warm, inviting atmosphere that makes you feel right at home.
+                    Whether you're looking to relax together or share memories, our Family Room is the ideal place for a
+                    restful and enjoyable stay.
+                </p>
+            </div>
+        </section>
 
-<section class="room-types">
-    <div class="room">
-        <h2>Family Room</h2>
-        <img src="image/fam.jpg" alt="Family" class="room-image">
-        <p>CASA A - P2,500 <br> GOOD FOR 2 PAX<br>CASA B - P4,000 <br>GOOD FOR 4 PAX</p>
+        <section class="gallery-item">
+            <div class="image-container">
+                <img src="images/dorm.jpg" alt="Image 2">
+            </div>
+            <div class="text-container">
+                <h2>Dormitory Room</h2>
+                <p>
+                    Escape to the charm and tranquility of our cozy Cabin, where rustic elegance meets modern comfort.
+                    Nestled amidst nature, this private retreat offers a peaceful sanctuary for those seeking a unique
+                    getaway. The cabin features a fully equipped kitchenette, a spacious living area with a welcoming
+                    fireplace, and comfortable bedrooms designed for restful nights. With large windows showcasing
+                    stunning views of the surrounding landscape, it’s the perfect place to relax and reconnect with
+                    family or friends. Whether you’re enjoying the outdoors or curling up indoors, our cabin provides an
+                    unforgettable resort experience.
+                </p>
+            </div>
+        </section>
+
+        <section class="gallery-item">
+            <div class="image-container">
+                <img src="images/Cabinroom.jpg" alt="Image 3">
+            </div>
+            <div class="text-container">
+                <h2>Cabin</h2>
+                <p>
+                    Our Dormitory offers an affordable and social lodging option, ideal for groups, backpackers, or
+                    those seeking a more communal experience. Designed with comfort and convenience in mind, the dorm
+                    features cozy bunk beds, secure lockers, and ample shared space to relax and connect with fellow
+                    travelers. Whether you're unwinding in the common area or planning your next adventure, you'll enjoy
+                    a vibrant, friendly atmosphere. With access to all resort amenities and breathtaking views, our
+                    Dormitory is the perfect base for those looking to explore and make lasting memories.
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Modal -->
+    <div class="modal" id="image-modal">
+        <span class="close" id="close-modal">&times;</span>
+        <img id="modal-img" src="" alt="Full View">
     </div>
 
-    <div class="room">
-        <h2>Cabin</h2>
-        <img src="image/cabin.jpg" alt="Cabin" class="room-image">
-        <p>CABIN 2 - P 3,000 <br>GOOD FOR 2 PAX<br>CABIN 3 - P 3,000 <br>GOOD FOR 2 PAX<br>CABIN 4 - P 2,500 <br>GOOD FOR 2 PAX<br>CABIN 5 - P 2,500 <br>GOOD FOR 2 PAX</p>
-    </div>
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const closeModal = document.getElementById('close-modal');
 
-    <div class="room">
-        <h2>Dormitory Room</h2>
-        <img src="image/Dorm.jpg" alt="Dormitory" class="room-image">
-        <p>GOOD FOR 15 PAX - P 7,500 <br>GOOD FOR 20 PAX - P 10,000</p>
-    </div>
-</section>
+        // Add click event to all images
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = image.src;
+            });
+        });
 
-<!-- New Pool Section with Three Pool Types -->
-<section class="pool-types">
-    <h1>Our Pools</h1>
-    <div class="pool">
-        <img src="image/pool1.jpg" alt="Pool" class="pool-image">
-    </div>
+        // Close modal on clicking the close button
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
 
-    <div class="pool">
-        <img src="image/pool2.jpg" alt="Pool" class="pool-image">
-    </div>
+        // Close modal on clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target !== modalImg) {
+                modal.style.display = 'none';
+            }
+        });
 
-    <div class="pool">
-        <img src="image/pool3.jpg" alt="Pool" class="pool-image">
-    </div>
-</section>
+        // Get all gallery images
+        const images = document.querySelectorAll('.gallery-item');
 
-<!-- New Gallery Section Below the Pools (Add more images here) -->
-<section class="new-gallery">
-    <h1>Photos</h1>
-        <div class="gallery-item">
-            <img src="image/img2.jpg" alt="Gallery Image 1" class="gallery-image">
-        </div>
-        <div class="gallery-item">
-            <img src="image/img3.jpg" alt="Gallery Image 2" class="gallery-image">
-        </div>
-        <div class="gallery-item">
-            <img src="image/img6.jpg" alt="Gallery Image 3" class="gallery-image">
-        </div>
-        <div class="gallery-item">
-            <img src="image/img8.jpg" alt="Gallery Image 4" class="gallery-image">
-        </div>
+        // Add click event listener to each image
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // Toggle the 'zoomed' class on click to zoom or unzoom
+                image.classList.toggle('zoomed');
+            });
+        });
+    </script>
 
-    </div>
-</section>
-
-<section class="more-gallery">
-    <h1></h1>
-        <div class="gallery-items">
-            <img src="image/img7.jpg" alt="Gallery Image 6" class="more-image">
-        </div>
-        <div class="gallery-items">
-            <img src="image/img4.jpg" alt="Gallery Image 7" class="more-image">
-        </div>
-        <div class="gallery-items">
-            <img src="image/img9.jpg" alt="Gallery Image 8" class="more-image">
-        </div>
-        <div class="gallery-items">
-            <img src="image/img5.jpg" alt="Gallery Image 9" class="more-image">
-        </div>
-
-    </div>
-</section>
-
-<!-- Photo End -->
-
-
-    <!-- Footer Section Begin -->
+    <!-- Footer Section  -->
     <footer>
         <div class="footer">
             <div class="socialIcons">
@@ -127,27 +162,15 @@
             </div>
             <div class="footerNav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Index.html">Home</a></li>
                     <li><a href="Gallery.html">Gallery</a></li>
                     <li><a href="About.html">About us</a></li>
                     <li><a href="Contact.html">Contact us</a></li>
                 </ul>
             </div>
+
         </div>
     </footer>
-    <!-- Footer End -->
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    // Change 'index.html' to any link you want to navigate to
-    document.querySelector('.logo-link').addEventListener('click', function() {
-        window.location.href = 'index.html'; // Change this to your desired page
-    });
-});
-
-    </script>
-
 </body>
 
 </html>

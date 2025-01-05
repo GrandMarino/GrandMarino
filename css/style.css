@@ -1,513 +1,246 @@
-/* Google Fonts Link */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-
-
-/* Navbar Start */
-nav {
-  background: rgba(255, 255, 255, 0.1);
-  height: 80px;
-  width: 100%;
-  position: relative;
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Align items vertically centered */
-  justify-content: space-between; /* Logo on left and hamburger on right */
-  padding: 0 20px; /* Add padding to left and right for spacing */
-}
-
-/* Logo Styles */
-label.logo a {
-  display: block;
-}
-
-label.logo img {
-  max-height: 190px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  transition: all 0.3s ease;
-}
-
-
-label.logo a:hover {
-  background-color: rgba(37, 26, 185, 0.1);
-  border-radius: 10px; 
-}
-
-
-label.logo img:hover {
-  opacity: 0.7; 
-  transform: scale(1.05); 
-}
-
-
-nav ul {
-  float: right;
-  margin-right: 20px;
-}
-
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-
-nav ul li a {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-a.active,
-a:hover {
-  background: linear-gradient(45deg, cyan, #00bcd4, #1b9bff);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase; 
-  letter-spacing: 1px; 
-}
-
-/* Hamburger Menu Button (the checkbtn) */
-.checkbtn {
-  font-size: 22px;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  display: none;
-  margin-left: auto; /* Push the hamburger menu to the right */
-}
-
-/* Button inside Navbar */
-nav button {
-  background-color: rgb(243, 190, 121);
-  margin-left: 10px;
-  font-weight: bold;
-  border-radius: 10px;
-  padding: 10px;
-  width: 90px;
-}
-
-nav button a {
-  color: white;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-#check {
-  display: none;
-}
-
-/* For Small Screens (above 480px but below 890px) */
-@media (max-width: 890px) {
-  .checkbtn {
-    display: block; /* Display the hamburger menu on small screens */
-    position: absolute; /* Position the hamburger menu at the top-right */
-    right: 20px; /* Right-align the hamburger menu */
-    top: 20px; /* Position it slightly below the top edge */
-  }
-
-  label.logo {
-    font-size: 22px;
-  }
-
-  /* Navigation menu (ul) for small screens */
-  ul {
-    position: fixed;
-    width: 40%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-    z-index: 1000; /* Make sure the menu is above everything else */
-  }
-
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  /* When the checkbox is checked, slide the menu into view */
-  #check:checked ~ ul {
-    left: 0;
-  }
-
-  /* Background overlay that appears when the menu is opened */
-  #check:checked ~ .overlay {
-    display: block;
-  }
-
-  /* Content overlay that hides other page content */
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Just below the menu */
-  }
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+/* Main Header */
+.main-header {
+    background-color: white;
+    padding: 20px 5%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo styling */
+.main-header .logo img {
+    height: 100px;
+    width: 100px;
 }
 
 
-
-/* For Devices Below 480px */
-@media (max-width: 480px) {
-
-  label.logo a {
-    font-size: 20px;
-    padding: 0 10px;
-  }
-
-  .checkbtn {
-    font-size: 18px; 
-    margin-right: 15px;
-  }
-
-  nav ul {
-    width: 70%;
-    height: auto;
-    top: 80px;
-    flex-direction: column; /* Stack items vertically for small screens */
-  }
-
-  nav ul li {
-    margin: 30px 0;
-  }
-
-  nav ul li a {
-    font-size: 18px;
-    padding: 8px 12px;
-  }
-
-  .footerContainer {
-    padding: 50px 20px;
-  }
+#menu-toggle {
+    display: none;
 }
 
-
-/* For Small Screens (above 480px but below 890px) */
-@media (max-width: 890px) {
-  .checkbtn {
-    display: block;
+/* Hamburger Icon */
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2c3e50;
     position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 1001; /* Ensure it's above the menu */
-  }
+    right: 5%; /* Aligns the icon to the right */
+}
 
-  label.logo {
-    font-size: 22px;
-  }
+.main-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
 
-  /* Navigation menu (ul) for small screens */
-  ul {
-    position: fixed;
-    width: 60%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 0;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-    z-index: 1000; /* Menu behind the hamburger button */
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 30px; /* Ensure top spacing from the top bar */
-  }
+.main-header nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
 
-  nav ul li {
-    display: block;
-    margin: 10px 0; /* Reduced margin for closer items */
-  }
+.main-header nav ul li a:hover {
+    background-color: yellow;
+    color: white;
+}
 
-  nav ul li a {
-    font-size: 20px;
-    padding: 10px 20px; /* More padding to make links easier to tap */
-  }
+.main-header nav ul li a.active {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
 
-  /* When the checkbox is checked, slide the menu into view */
-  #check:checked ~ ul {
-    left: 0; /* Slide the menu in from the left */
-  }
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
 
-  #check:checked ~ .overlay {
-    display: block;
-  }
+    .main-header nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        display: none;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+    .main-header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Toggle Menu Display */
+    #menu-toggle:checked + .menu-icon + nav ul {
+        display: flex;
+    }
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 480px) {
+    .main-header .logo {
+        font-size: 1.2rem;
+    }
+
+    .main-header nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Full-Screen Slideshow */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.slideshow-container img {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Just below the menu */
-  }
+    object-fit: cover; /* Ensures images cover the entire slide */
+    display: block; /* Prevents extra space below images */
 }
 
-/* For Devices Below 480px */
-@media (max-width: 480px) {
-  label.logo a {
-    font-size: 20px;
-    padding: 0 10px;
-  }
-
-  .checkbtn {
-    font-size: 18px;
-    margin-right: 15px;
-  }
-
-  nav ul {
-    width: 70%;
-    height: auto;
-    top: 0;
-    flex-direction: column;
-    padding: 0 20px;
-  }
-
-  nav ul li {
-    margin: 8px 0; /* Further reduce margin for closer items */
-  }
-
-  nav ul li a {
-    font-size: 18px;
-    padding: 8px 12px;
-  }
-
-  .footerContainer {
-    padding: 50px 20px;
-  }
-}
-
-
-/* For Devices Below 480px */
-@media (max-width: 480px) {
-
-  label.logo a {
-    font-size: 20px;
-    padding: 0 10px;
-  }
-
-  .checkbtn {
-    font-size: 18px; 
-    margin-right: 15px;
-  }
-
-  nav ul {
-    width: 70%;
-    height: auto;
-    top: 80px;
-    flex-direction: column; /* Stack items vertically for small screens */
-  }
-
-  nav ul li {
-    margin: 30px 0;
-  }
-
-  nav ul li a {
-    font-size: 18px;
-    padding: 8px 12px;
-  }
-
-  .footerContainer {
-    padding: 50px 20px;
-  }
-}
-
-
-/*for Small Screens (above 480px but below 890px) */
-@media (max-width: 890px) {
-  .checkbtn {
-    display: block;
-  }
-
-  label.logo {
-    font-size: 22px;
-  }
-
-  /* Navigation menu (ul) for small screens */
-  ul {
-    position: fixed;
-    width: 40%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-    z-index: 1000; /* Make sure the menu is above everything else */
-  }
-
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  /* When the checkbox is checked, slide the menu into view */
-  #check:checked ~ ul {
-    left: 0;
-  }
-
-  /* Background overlay that appears when the menu is opened */
-  #check:checked ~ .overlay {
-    display: block;
-  }
-
-  /* Content overlay that hides other page content */
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Dots/Indicators for Full-Screen Slideshow */
+.slideshow-dots {
+    position: absolute;
+    bottom: 20px;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Just below the menu */
-  }
+    text-align: center;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 
-
-/*Devices (below 480px) */
-@media (max-width: 480px) {
-
-  label.logo a {
-    font-size: 20px;
-    padding: 0 10px;
-  }
-
-  .checkbtn {
-    font-size: 18px; 
-    margin-right: 15px;
-  }
-
-  nav ul {
-    width: 70%;
-    height: auto;
-  }
-
-  nav ul li {
-    margin: 30px 0;
-  }
-
-  nav ul li a {
-    font-size: 18px;
-    padding: 8px 12px;
-  }
-
-  .footerContainer {
-    padding: 50px 20px;
-  }
-}
-
-/* Navbar End */
-
-/* Footer */
-footer {
-  background-color: rgb(0, 0, 0);
+.slogan {
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  top: 20%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: white; 
+  font-size: 24px; 
+  padding: 10px; 
+  border-radius: 5px; 
+  text-align: center;
+}
+.slogan h1{
+  font-size: 70px;
 }
 
-.footerContainer {
-  width: 100%;
-  padding: 70px 30px 20px;
-}
 
-.socialIcons {
-  display: flex;
-  justify-content: center;
-}
-
-.socialIcons a {
-  text-decoration: none;
-  padding: 5px;
-  background-color: white;
-  margin: 10px;
-  border-radius: 50%;
-}
-
-.socialIcons a i {
-  font-size: 1.5em;
-  color: rgb(48, 1, 255);
-  opacity: 0.9;
-}
-
-/* Hover effect on social media icon */
-.socialIcons a:hover {
-  background-color: #111111;
-  transition: 0.5s;
-}
-
-.socialIcons a:hover i {
-  color: white;
-  transition: 0.5s;
-}
-
-.footerNav {
-  margin: 30px 0;
-}
-
-.footerNav ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-}
-
-.footerNav ul li a {
-  color: rgb(255, 255, 255);
-  margin: 20px;
-  text-decoration: none;
-  font-size: 1em;
-  opacity: 0.7;
-  transition: 0.5s;
-  font-size: 20px;
-}
-
-.footerNav ul li a:hover {
-  opacity: 1;
-}
-
-.designer {
-  opacity: 0.7;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  margin: 0px 5px;
-}
+/* Footer Start */
+footer {
+    background-color: rgb(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .footerContainer {
+    width: 100%;
+    padding: 1px 10px 5px;
+  }
+  
+  
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .socialIcons a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  
+  .socialIcons a i {
+    font-size: 1.5em;
+    color: rgb(48, 1, 255);
+    opacity: 0.9;
+  }
+  
+  /* Hover effect on social media icon */
+  .socialIcons a:hover {
+    background-color: rgb(48, 1, 255);
+    transition: 0.5s;
+  }
+  
+  .socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+  }
+  
+  .footerNav {
+    margin: 10px 0;
+  }
+  
+  .footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  
+  .footerNav ul li a {
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: 0.5s;
+    font-size: 20px;
+  }
+  
+  .footerNav ul li a:hover {
+    opacity: 1;
+  }
+  
+  .designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+  }
+  /* Footer End */
