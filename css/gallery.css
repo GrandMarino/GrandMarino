@@ -164,7 +164,7 @@ html, body {
 
 .room-heading {
   font-size: 2rem;
-  color: #333;
+  color: #00bcd4;;
   margin: 20px 0; 
   text-align: center; 
 }
@@ -203,13 +203,13 @@ html, body {
 
 .text-container h2 {
   font-size: 1.5rem;
-  color: #333;
+  color: #00bcd4;;
   margin-bottom: 1rem;
 }
 
 .text-container p {
   font-size: 1.5rem;
-  color: #555;
+  color: black;
   margin-bottom: 1.5rem;
 }
 
@@ -232,9 +232,28 @@ html, body {
 .header h1 {
   text-align: center;
 }
+.header p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 1.5rem;
+}
 .text-container p{
   text-align: justify;
 }
+
+.amenities-heading {
+  text-align: center; 
+  font-size: 2rem; 
+  margin-bottom: 20px; 
+  color: #333; 
+}
+ .gallery-container h3{
+  text-align: center;
+ }
+ .gallery-container h2{
+  color: #00bcd4;;
+ }
 
 /* Modal Styles */
 .modal {
@@ -378,4 +397,10 @@ footer {
   .gallery-item2 {
     padding: 0.5rem;
   }
+}
+footer .copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #777;
 }

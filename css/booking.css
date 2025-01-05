@@ -261,3 +261,9 @@ footer {
     margin: 0px 5px;
   }
   /* Footer End */
+  footer .copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #777;
+  }

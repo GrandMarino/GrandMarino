@@ -269,3 +269,9 @@ footer {
       padding-bottom: 10px; /* Ensure space at the bottom of the container */
   }
 }
+footer .copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #777;
+}
