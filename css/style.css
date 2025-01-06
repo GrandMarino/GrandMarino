@@ -112,25 +112,28 @@ html, body {
 }
 
 /* Full-Screen Slideshow */
+/* Full-Screen Slideshow */
 .slideshow-container {
   position: relative;
-  width: 100%;
+  width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  overflow: hidden;
-  margin: 0; /* Remove any margin causing white space */
-  padding: 0; /* Ensure no padding around the container */
-  display: flex; /* Flexbox for centering and controlling image positioning */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  overflow: hidden; /* Ensure no overflow is visible */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
+  background-color: black; /* Fallback background color */
 }
 
 .slideshow-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire slide */
-  display: block; /* Prevents extra space below images */
-  transition: transform 0.3s ease-in-out; /* Smooth transition on resize */
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  object-fit: cover; /* Ensures the image covers the entire container without distortion */
+  display: block; /* Prevents gaps below images */
+  transition: transform 0.3s ease-in-out; /* Smooth resizing transitions */
 }
+
 
 @media (max-width: 768px) {
   .slideshow-container {

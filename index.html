@@ -88,12 +88,13 @@
                 dots[slideIndex - 1].classList.add("active");
             }
 
-            // Set timeout for the next slide
-            setTimeout(showSlides, 5000); // Change every 5 seconds
+            // Set timeout for the next slide (faster speed, 3 seconds)
+            setTimeout(showSlides, 2000); // Change every 2 seconds
         }
 
         // Initialize slideshow on page load
         document.addEventListener("DOMContentLoaded", showSlides);
+
     </script>
 
 

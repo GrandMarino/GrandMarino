@@ -160,7 +160,9 @@ html, body {
   text-align: center;
 }
 
-
+.header h1{
+  color: #00bcd4;;
+}
 
 .room-heading {
   font-size: 2rem;
