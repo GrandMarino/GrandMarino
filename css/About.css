@@ -62,13 +62,13 @@ html, body {
 }
 
 .main-header nav ul li a:hover {
-  background-color: yellow;
+  background-color: #00bcd4;
   color: white;
 }
 
 .main-header nav ul li a.active {
-  background-color: yellow;
-  color: black;
+  background-color: #00bcd4;
+  color: white;
   font-weight: bold;
 }
 
@@ -190,45 +190,40 @@ footer {
 }
 /* Footer End */
   
-  /* About Us Section */
+  /* Main container for About Us section */
 .about-us-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 50px;
-  flex-wrap: wrap; 
-  box-sizing: border-box; 
-  overflow: hidden;
-  flex-grow: 1; 
+  padding: 20px;
+  gap: 20px;
 }
 
+/* Text section styling */
 .about-us-text {
-  flex: 1;
-  margin-right: 20px;
-  padding: 20px;
-  color: #333;
-  box-sizing: border-box; 
+  flex: 1 1 40%;
+  max-width: 600px;
+  padding: 10px;
 }
 
 .about-us-text h1 {
-  color: #2c3e50;
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #00bcd4;
 }
 
 .about-us-text p {
-  font-size: 18px;
+  font-size: 1em;
   line-height: 1.6;
-  text-align: justify; /* Justify the text */
+  color: black;
+  text-align: justify;
 }
 
 .about-us-image {
-  flex: 1;
-  max-width: 80%;
-  height: 80%; 
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  flex: 1 1 40%;
+  max-width: 600px;
+  padding: 10px;
 }
 
 .about-us-image img {
@@ -237,38 +232,32 @@ footer {
   border-radius: 10px;
 }
 
-/* For larger screens: Desktops and laptops (max-width: 1200px) */
-@media (max-width: 1200px) {
-  .about-us-container {
-      padding: 20px;
-  }
-
-  .about-us-container {
-      padding-bottom: 20px; /* Ensure space between content and footer */
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .about-us-image {
+    flex: 1 1 50%; /* Adjust flex basis for medium screens */
+    max-width: 100%; /* Allow full width */
   }
 }
 
-/* For small screens: Phones (max-width: 768px) */
 @media (max-width: 768px) {
-  .about-us-container {
-      flex-direction: column;
-      padding: 20px;
-  }
-
-  .about-us-container {
-      padding-bottom: 20px; /* Ensure enough space at the bottom */
+  .about-us-image {
+    flex: 1 1 100%; /* Stack the image section for smaller screens */
+    text-align: center; /* Center align if necessary */
   }
 }
 
 @media (max-width: 480px) {
-  footer {
-      padding: 10px;
-      font-size: 10px;
+  .about-us-image {
+    padding: 5px; /* Reduce padding for extra-small screens */
   }
-  .about-us-container {
-      padding-bottom: 10px; /* Ensure space at the bottom of the container */
+
+  .about-us-image img {
+    border-radius: 5px; /* Slightly smaller border-radius for tighter layouts */
   }
 }
+
+
 footer .copyright {
   text-align: center;
   font-size: 14px;

@@ -62,15 +62,15 @@ html, body {
 }
 
 .main-header nav ul li a:hover {
-    background-color: yellow;
+    background-color: #00bcd4;
     color: white;
-}
-
-.main-header nav ul li a.active {
-    background-color: yellow;
-    color: black;
+  }
+  
+  .main-header nav ul li a.active {
+    background-color: #00bcd4;
+    color: white;
     font-weight: bold;
-}
+  }
 
 /* Responsive Navigation */
 @media (max-width: 768px) {

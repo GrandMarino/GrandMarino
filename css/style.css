@@ -61,13 +61,13 @@ html, body {
 }
 
 .main-header nav ul li a:hover {
-  background-color: yellow;
+  background-color: #00bcd4;
   color: white;
 }
 
 .main-header nav ul li a.active {
-  background-color: yellow;
-  color: black;
+  background-color: #00bcd4;
+  color: white;
   font-weight: bold;
 }
 
